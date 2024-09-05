@@ -34,10 +34,10 @@
  * The exception will also include the call stack at the exact moment
  * the issue was detected
  * 
- * Option 1: An exception that is not handled, a stack trace will be printed...
+ # Option 1: An exception that is not handled, a stack trace will be printed...
  * useful to see what went wrong
  * 
- * Option 2: is to catch the exception with a try and catch block for
+ # Option 2: is to catch the exception with a try and catch block for
  * dangerous and dependent code
  * After the try block is where exception handlers/try block is placed
  * for scenarios that go wrong
@@ -50,4 +50,44 @@
  * not specific
  * 
  * It is still better to handle expected issues than use a catch-all
+ * 
+ * Errors and exceptions are different. Exceptions are things that could
+ * interrupt a program but still could allow the program to continue.
+ * 
+ * Errors are so severe that it is uncoverable; like running a program
+ * and the hard drive is removed
+ * 
+ * Runtime exceptions (Index out of bounds, divide by zero)
+ * are generally easy to fix and not neccesarily needed
+ * 
+ * Checked exceptions/Parse Exceptions
+ * are issues that are not necessarily the fault of the program, 
+ * like file not found.
+ * 
+ # Option 3: Propagate the exception
+ * A throws clause is a way to explicitly "pass the buck" instead of
+ * dealing with the issue
+ * 
+ * The throws clause propagates back to where the method was called (on the
+ * stack) and it could be handled elsewhere
+ * 
+ * A case where this problem exists, is to have a more fundamental method to
+ * handle the throws exceptions
+ * 
+ # Writing New Exceptions:
+ * Create a new class and extend the most appropriate Exception class
+ * 
+ * Ex. Invalid file format is a custom exception class
+ public class InvalidFileFormatException extends IOException {
+    public InvalidFileFormatException( String message) {
+        super( message );
+    }
+ }
+
+ A good name, a good parent, and a good constructor is the best practice
+ for writing a new exception
+
+ if ( ! scan.hasNextInt() ) {
+    throw new InvalidFileFormatException( "Missing expected integer" );
+ }
  */
