@@ -55,9 +55,9 @@ Some algorithms operate as constant time methods O(n^0) = 1, such as the length(
 
 Logarithmic functions utilize a stair step method to represent, where each stair step is twice as long as the value before it. Not very common O(log n)
 
-Similarly log-linear has a value n, that multiplies the log value O(n log n)
-
 Linear algorithms are generally characterized by a single loop. toString() is an example on a collection. O(n)
+
+Similarly log-linear has a value n, that multiplies the log value O(n log n)
 
 A quadratic algorithm is often a nested loop, concatenation (string addition) is an example. O(n^2)
 
