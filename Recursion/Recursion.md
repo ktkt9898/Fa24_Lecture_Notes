@@ -62,3 +62,6 @@ However, some problems are more easily and elegantly expressed recursively
 First priority is always correctness
 Second priority is readability, not neccesarily fast
     Compromise in clarity is allowed for specific tasks however
+
+# Extra
+Base cases can be as many as desired
