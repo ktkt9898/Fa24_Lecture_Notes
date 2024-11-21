@@ -34,3 +34,10 @@ Cons, cannot scale as efficiently as n becomes very large.
 
 Logarithmic NOT binary search logartihmic but log-linear (n * log n) instead and are characterized by recursive divide and conquer algorithms.
 As the input size increases their efficiency improves.
+
+# Logarithmic Sort 1 - Quick Sort
+Divide and conquer by choosing a sngle element to serve as a pivot element, all elements smaller than the pivot are placed into a left side list
+and larger elements on the right side of the list
+Then recursively, sort the left and right side again with the pivot element
+Pivot element does not neccesarily have to be the middle value
+When the divided lists are split, the left list is combined first, then the pivot, then the right list
