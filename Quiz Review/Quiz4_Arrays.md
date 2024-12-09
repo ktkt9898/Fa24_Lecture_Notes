@@ -33,8 +33,9 @@ public T remove(int index) {
 Your Answer:
 
 for (int i = index; i < rear - 1; i++) {
-
+    // [1, 2, 3, (4), 5, 6, rear]
     list[i] = list[i + 1];
+    // [1, 2, 3, 5, 6, 6, rear]
 
 }
 
